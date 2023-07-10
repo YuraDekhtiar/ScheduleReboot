@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">Schedule Reboot</string>
+    <string name="change_button">Change</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="control">Сontrol</string>
+</resources>
