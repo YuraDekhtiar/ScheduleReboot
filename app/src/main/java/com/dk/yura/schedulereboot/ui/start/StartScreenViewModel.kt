@@ -52,6 +52,14 @@ class StartScreenViewModel(
         Log.d("root", RuntimeManagerApp.exec(RuntimeManagerApp.Action.CHECK_ROOT).toString())
     }
 
+    fun rebootAction() {
+        Log.d("root", RuntimeManagerApp.exec(RuntimeManagerApp.Action.REBOOT).toString())
+    }
+
+    fun shutdownAction() {
+        Log.d("root", RuntimeManagerApp.exec(RuntimeManagerApp.Action.SHUTDOWN).toString())
+    }
+
     private fun update() {
         _update.value = !_update.value
         alarmManagerApp.setAlarm()

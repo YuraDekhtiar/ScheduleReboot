@@ -64,8 +64,8 @@ fun StartScreenContent(modifier: Modifier, viewModel: StartScreenViewModel, data
                 Text(text = "Керування")
                 Spacer(modifier = modifier.padding(top = 15.dp))
                 ButtonComponent(text = "Check Root", onClick = { viewModel.checkRoot() })
-                ButtonComponent(text = "Reboot now", onClick = { })
-                ButtonComponent(text = "Shutdown now", onClick = { })
+                ButtonComponent(text = "Reboot now", onClick = { viewModel.rebootAction() })
+                ButtonComponent(text = "Shutdown now", onClick = { viewModel.shutdownAction() })
             }
         }
         TimeComponent(modifier, viewModel, data)
