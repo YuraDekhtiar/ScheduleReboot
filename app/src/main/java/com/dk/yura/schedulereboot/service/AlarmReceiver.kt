@@ -8,6 +8,8 @@ import com.dk.yura.schedulereboot.AlarmManagerApp
 import com.dk.yura.schedulereboot.AlarmManagerApp.Companion.REBOOT_ACTION_INTENT
 import com.dk.yura.schedulereboot.RuntimeManagerApp
 import com.dk.yura.schedulereboot.ui.start.SettingsRepository
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 
 
 class AlarmReceiver : BroadcastReceiver() {
@@ -25,10 +27,16 @@ class AlarmReceiver : BroadcastReceiver() {
 
         if (intent?.action == "android.intent.action.BOOT_COMPLETED") {
             if (context != null) {
-                AlarmManagerApp(context, SettingsRepository(context)).setAlarm()
+                runBlocking {
+                    // Waiting startup system services and time synchronization
+                    delay(PauseTimeMillis)
+                    AlarmManagerApp(context, SettingsRepository(context)).setAlarm()
+                }
             }
             Log.d("AlarmBroadcast", "android.intent.action.BOOT_COMPLETED")
         }
     }
 }
+
+const val PauseTimeMillis: Long = 30000
 

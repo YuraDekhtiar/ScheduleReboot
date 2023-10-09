@@ -1,5 +1,12 @@
 package com.dk.yura.schedulereboot.data
 
+
+
+data class SettingsModel(
+    val timeUi: TimeUi,
+    val isEnabled: Boolean,
+)
+
 data class TimeUi(
     val hour: Int,
     val minute: Int
@@ -16,7 +23,3 @@ data class TimeUi(
     }
 }
 
-data class SettingsModel(
-    val timeUi: TimeUi,
-    val isEnabled: Boolean,
-)

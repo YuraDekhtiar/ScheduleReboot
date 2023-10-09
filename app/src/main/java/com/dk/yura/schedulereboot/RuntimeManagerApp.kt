@@ -25,8 +25,6 @@ object RuntimeManagerApp {
             e.printStackTrace()
             false
         }
-
-
     }
 
     enum class Action {
