@@ -1,4 +1,4 @@
-package com.dk.yura.schedulereboot.ui.start
+package com.dk.yura.schedulereboot.data
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -8,8 +8,6 @@ import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import com.dk.yura.schedulereboot.data.SettingsModel
-import com.dk.yura.schedulereboot.data.TimeUi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.first
@@ -61,5 +59,4 @@ class SettingsRepository(
 
         return SettingsModel(TimeUi(hour, minutes), isEnabled)
     }
-
 }

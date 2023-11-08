@@ -1,4 +1,4 @@
-package com.example.schedulereboot.ui.widgets.undomain
+package com.dk.yura.schedulereboot.ui.widgets.undomain
 
 import com.dk.yura.schedulereboot.ui.util.UiState
 import kotlinx.coroutines.CoroutineScope

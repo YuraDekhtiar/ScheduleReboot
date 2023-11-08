@@ -7,7 +7,7 @@ import android.util.Log
 import com.dk.yura.schedulereboot.AlarmManagerApp
 import com.dk.yura.schedulereboot.AlarmManagerApp.Companion.REBOOT_ACTION_INTENT
 import com.dk.yura.schedulereboot.RuntimeManagerApp
-import com.dk.yura.schedulereboot.ui.start.SettingsRepository
+import com.dk.yura.schedulereboot.data.SettingsRepository
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 

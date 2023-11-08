@@ -6,9 +6,10 @@ import androidx.lifecycle.viewModelScope
 import com.dk.yura.schedulereboot.AlarmManagerApp
 import com.dk.yura.schedulereboot.RuntimeManagerApp
 import com.dk.yura.schedulereboot.data.SettingsModel
+import com.dk.yura.schedulereboot.data.SettingsRepository
 import com.dk.yura.schedulereboot.data.TimeUi
 import com.dk.yura.schedulereboot.ui.util.UiState
-import com.example.schedulereboot.ui.widgets.undomain.stateInWhileSubscribe
+import com.dk.yura.schedulereboot.ui.widgets.undomain.stateInWhileSubscribe
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

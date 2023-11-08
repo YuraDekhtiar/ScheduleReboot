@@ -1,4 +1,4 @@
-package com.example.schedulereboot.ui.widgets
+package com.dk.yura.schedulereboot.ui.widgets
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable

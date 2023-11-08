@@ -7,7 +7,7 @@ import android.content.Intent
 import com.dk.yura.schedulereboot.data.SettingsModel
 import com.dk.yura.schedulereboot.data.TimeUi
 import com.dk.yura.schedulereboot.service.AlarmReceiver
-import com.dk.yura.schedulereboot.ui.start.SettingsRepository
+import com.dk.yura.schedulereboot.data.SettingsRepository
 import kotlinx.coroutines.runBlocking
 import java.util.Calendar
 

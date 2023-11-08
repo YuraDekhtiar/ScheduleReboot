@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import com.example.schedulereboot.ui.widgets.ErrorScreen
-import com.example.schedulereboot.ui.widgets.Loader
+import com.dk.yura.schedulereboot.ui.widgets.ErrorScreen
+import com.dk.yura.schedulereboot.ui.widgets.Loader
 import kotlinx.coroutines.flow.StateFlow
 
 @Composable
