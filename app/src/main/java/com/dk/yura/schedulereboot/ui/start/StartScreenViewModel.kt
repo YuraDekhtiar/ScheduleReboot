@@ -38,14 +38,14 @@ class StartScreenViewModel(
     fun changeStatusTask(status: Boolean) {
         viewModelScope.launch {
             settingsRepository.setStatusTask(status)
-            update()
+            updateSettings()
         }
     }
 
     fun setTaskTime(timeUi: TimeUi) {
         viewModelScope.launch {
             settingsRepository.setTaskTime(timeUi)
-            update()
+            updateSettings()
         }
     }
 
@@ -61,9 +61,9 @@ class StartScreenViewModel(
         Log.d("root", RuntimeManagerApp.exec(RuntimeManagerApp.Action.SHUTDOWN).toString())
     }
 
-    private fun update() {
+    private fun updateSettings() {
         _update.value = !_update.value
-        alarmManagerApp.setAlarm()
+        alarmManagerApp.setAlarm(0)
     }
 }
 

@@ -4,10 +4,12 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import com.dk.yura.schedulereboot.data.SettingsModel
+import com.dk.yura.schedulereboot.data.SettingsRepository
 import com.dk.yura.schedulereboot.data.TimeUi
 import com.dk.yura.schedulereboot.service.AlarmReceiver
-import com.dk.yura.schedulereboot.data.SettingsRepository
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import java.util.Calendar
 
@@ -15,7 +17,14 @@ class AlarmManagerApp(
     private val context: Context,
     private val settingsRepository: SettingsRepository
 ) {
-    fun setAlarm() {
+    fun setAlarm(delay: Long = 30_000) {
+        runBlocking {
+            // Waiting startup system services and time synchronization
+            delay(delay)
+            setAlarm()
+        }
+    }
+    private fun setAlarm() {
         val settingsModel: SettingsModel = runBlocking {
             settingsRepository.getSettings()
         }
@@ -33,6 +42,7 @@ class AlarmManagerApp(
                     getCalendarInstance(settingsModel.timeUi).timeInMillis,
                     alarmIntent
                 )
+                Log.d("AlarmManagerApp", "setAlarm() -> successfully")
             }
 
             false -> {
